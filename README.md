@@ -32,7 +32,7 @@ PLEASE READ:
 3 MACROS:
    1. REDCap_API_Importer_CSV
    2. REDCap_API_Importer_XML
-   3. REDCap_API_Importer_CSVandXML
+   3. SAS2REDCap
 
 You can utilize macros 1 and 2 on their own if you would like. However, the suggested macro to utilize is macro number 3. This macro gives you the flexibility to call either the csv or xml macro. To get the import macros up and running, save all of them to a specific directory on your computer. Within SAS use a %include statement to compile macro number 3 (as an example). Then input all of the necessary parameters for the macro in order to import a SAS dataset into REDCap. 
 
