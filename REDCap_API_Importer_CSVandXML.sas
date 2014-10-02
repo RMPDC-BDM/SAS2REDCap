@@ -1,25 +1,25 @@
 /******************************************************************************
-PROGRAM NAME:   REDCap_API_Importer_CSVandXML.sas
+PROGRAM NAME:    SAS2REDCap.sas
 
 PRIMARY MACRO:	 SAS2REDCap
 
 SAS Version:	 9.3
 
-REDCap Version: 5.0.15
+REDCap Version:  5.0.15
 
-PURPOSE:			 MACRO: Read a SAS dataset and import it into REDCap using CSV or XML formatting
+PURPOSE:	 MACRO: Read a SAS dataset and import it into REDCap using CSV or XML formatting
 
 INPUT FILES:	 SAS dataset of choice which is ready to be imported into REDCap
 
 OUTPUT FILES:	 &dir.\API_IMPORT_CSV\in.csv, &dir.\API_IMPORT_CSV\out.csv, &dir.\API_IMPORT_CSV\status.txt
 
-AUTHOR:			 Randy Burnham
-TITLE:			 Statistical Research Specialist
+AUTHOR:		Randy Burnham
+TITLE:		Statistical Research Specialist
 
-CO-AUTHOR:	 Jason Lones
-TITLE:			 Clinical Data Manager | Data Storage Administrator | REDCap Administrator
+CO-AUTHOR:	Jason Lones
+TITLE:		Clinical Data Manager | Data Storage Administrator | REDCap Administrator
 
-ORGANIZATION:	 Rocky Mountain Poison and Drug Center, Denver, CO
+ORGANIZATION:	Rocky Mountain Poison and Drug Center, Denver, CO
 
 DATE CREATED:   04/12/2014
 *******************************************************************************/
