@@ -13,8 +13,11 @@ INPUT FILES:	 SAS dataset of choice which is ready to be imported into REDCap
 
 OUTPUT FILES:	 &dir.\API_IMPORT_CSV\in.csv, &dir.\API_IMPORT_CSV\out.csv, &dir.\API_IMPORT_CSV\status.txt
 
-AUTHOR:			 Randy Burnham
-TITLE:			 Statistical Research Specialist
+AUTHOR:			Randy Burnham
+TITLE:			Statistical Research Specialist
+
+CO-AUTHOR:		Jason Lones
+TITLE:			Clinical Data Manager | Data Storage Administrator | REDCap Administrator
 
 ORGANIZATION:	 Rocky Mountain Poison and Drug Center, Denver, CO
 
