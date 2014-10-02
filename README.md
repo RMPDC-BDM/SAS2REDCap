@@ -114,4 +114,11 @@ NOTES on Importing Issues:
 	  you will get a 403 error when executing the macro.
 
 	- SAS datasets must be REDCap ready!
+
+To review the poster we presented at the 2014 REDCapCon, follow this link: https://cloud.githubusercontent.com/assets/8998719/4495247/973699e6-4a59-11e4-8ca7-126555c43589.jpg.
+
+
+ 
+	
+
 -------------------------------------------------------------------------------;
