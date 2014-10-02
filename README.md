@@ -100,7 +100,6 @@ NOTES on Importing Issues:
 			  through the API. This can be implemented right here in the macro within the 'writexml' macro of
 			  macro number 2.
 
-
 	- Filesize issues arise when an "in" file exceeds 500kb, split the data up to be under this amount prior
 	  to importing.
 
