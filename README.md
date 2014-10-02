@@ -27,7 +27,6 @@ ORGANIZATION:	 Rocky Mountain Poison and Drug Center, Denver, CO
 
 DATE CREATED:   04/12/2014
 
-________________________________________________________________________________________________________________________________
 PLEASE READ:
 
 3 MACROS:
@@ -43,8 +42,6 @@ Make sure within your REDCap project:
 
 
 All parameters and known notes regarding REDcap data import are specified below.
-
-________________________________________________________________________________________________________________________________
 
 -------------------------------------------------------------------------------
  API IMPORTER (CSV AND XML version)
@@ -78,12 +75,11 @@ NOTES on Importing Issues:
 			- The tags "<" and ">" should not be a problem with the CSV format.
 		***TO RESOLVE THESE ISSUES for XML: WRAP your data with ![CDATA[any data value]]
 			-All data within the CDATA brackets will be ignored by the parser when SAS is talking to REDCap through
-				the API. This can be implemented right here in the macro within the 'writexml' macro of macro number 2.
+			the API. This can be implemented right here in the macro within the 'writexml' macro of macro number 2.
 
 	- Filesize issues arise when an "in" file exceeds 500kb, split the data up to be under this amount prior
 	  to importing.
-	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the XML format
-	  is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
+	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the XML		  format is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
 	- If permanent formats are created within datasteps, make sure the dataset being sent to REDCap
 	  is the data that REDCap expects. Strip new formats that were created and make sure all date variables within
 	  your dataset have the format "YYMMDD.". REDCap is picky on what data it takes (this is a good thing).
