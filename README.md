@@ -3,25 +3,25 @@ SAS2REDCap
 
 SAS Macros Utilizing the REDCap API for Data Exchange
 
-PRIMARY MACRO:	 SAS2REDCap
+PRIMARY MACRO:	SAS2REDCap
 
-SAS Version:	 9.3
+SAS Version:	9.3
 
-REDCap Version:  5.0.15
+REDCap Version: 5.0.15
 
-PURPOSE:	 MACRO: Read a SAS dataset and import it into REDCap using CSV or XML formatting
+PURPOSE:	MACRO: Read a SAS dataset and import it into REDCap using CSV or XML formatting
 
-INPUT FILES:	 SAS dataset of choice which is ready to be imported into REDCap
+INPUT FILES:	SAS dataset of choice which is ready to be imported into REDCap
 
-OUTPUT FILES:	 &dir.\API_IMPORT_CSV\in.csv, &dir.\API_IMPORT_CSV\out.csv, &dir.\API_IMPORT_CSV\status.txt
+OUTPUT FILES:	&dir.\API_IMPORT_CSV\in.csv, &dir.\API_IMPORT_CSV\out.csv, &dir.\API_IMPORT_CSV\status.txt
 
 AUTHOR:		Randy Burnham
-TITLE:		Statistical Research Specialist
+	TITLE:	Statistical Research Specialist
 
 CO-AUTHOR:	Jason Lones
-TITLE:		Clinical Data Manager | Data Storage Administrator | REDCap Administrator
+	TITLE:	Clinical Data Manager | Data Storage Administrator | REDCap Administrator
 
-ORGANIZATION:	 Rocky Mountain Poison and Drug Center, Denver, CO
+ORGANIZATION:	Rocky Mountain Poison and Drug Center, Denver, CO
 
 DATE CREATED:   04/12/2014
 
@@ -78,7 +78,8 @@ NOTES on Importing Issues:
 			
 			- "&" stops the API import process (SAS does this, not this program)
 			
-			- "+" does not appear in data when using the API, instead blank values are inserted (REDCap does this, 			  not this program)
+			- "+" does not appear in data when using the API, instead blank values are inserted (REDCap does this, 
+			  not this program)
 
 		TO RESOLVE THESE ISSUES for CSV:
 		
@@ -92,13 +93,16 @@ NOTES on Importing Issues:
 			
 			- WRAP your data with ![CDATA[any data value]]
 			
-			- All data within the CDATA brackets will be ignored by the parser when SAS is talking to REDCap 				  through the API. This can be implemented right here in the macro within the 'writexml' macro of 				  macro number 2.
+			- All data within the CDATA brackets will be ignored by the parser when SAS is talking to REDCap 
+			  through the API. This can be implemented right here in the macro within the 'writexml' macro of
+			  macro number 2.
 
 
 	- Filesize issues arise when an "in" file exceeds 500kb, split the data up to be under this amount prior
 	  to importing.
 
-	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the XML		  format is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
+	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the XML
+	  format is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
 	
 	- If permanent formats are created within datasteps, make sure the dataset being sent to REDCap
 	  is the data that REDCap expects. Strip new formats that were created and make sure all date variables within
