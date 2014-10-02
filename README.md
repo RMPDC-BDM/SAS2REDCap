@@ -58,7 +58,8 @@ REQUIRED:
 
 OPTIONAL:
 
-	filesize =filesize you would like to limit for the 'XML infile' or 'CSV infile' imported into REDCap (<=500kb necessary)
+	filesize =filesize you would like to limit for the 'XML infile' or 'CSV infile' imported into REDCap 
+	(<=500kb necessary)
 	
 	overwriteBehavior =API parameter for overwrite behavior in REDCap (values=normal | overwrite)
 	
@@ -78,8 +79,8 @@ NOTES on Importing Issues:
 			
 			- "&" stops the API import process (SAS does this, not this program)
 			
-			- "+" does not appear in data when using the API, instead blank values are inserted (REDCap does this, 
-			  not this program)
+			- "+" does not appear in data when using the API, instead blank values are inserted (REDCap does 
+			  this, not this program)
 
 		TO RESOLVE THESE ISSUES for CSV:
 		
@@ -101,8 +102,8 @@ NOTES on Importing Issues:
 	- Filesize issues arise when an "in" file exceeds 500kb, split the data up to be under this amount prior
 	  to importing.
 
-	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the XML
-	  format is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
+	- Very basic speed testing has been done with varying the format and filesize parameters. From the results, the 
+	  XML format is surprisingly twice as fast as the CSV format. Also, the optimal filesize is around 440kb.
 	
 	- If permanent formats are created within datasteps, make sure the dataset being sent to REDCap
 	  is the data that REDCap expects. Strip new formats that were created and make sure all date variables within
