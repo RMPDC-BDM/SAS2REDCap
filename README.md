@@ -16,9 +16,11 @@ INPUT FILES:	 SAS dataset of choice which is ready to be imported into REDCap
 OUTPUT FILES:	 &dir.\API_IMPORT_CSV\in.csv, &dir.\API_IMPORT_CSV\out.csv, &dir.\API_IMPORT_CSV\status.txt
 
 AUTHOR:		Randy Burnham
+
 TITLE:		Statistical Research Specialist
 
 CO-AUTHOR:	Jason Lones
+
 TITLE:		Clinical Data Manager | Data Storage Administrator | REDCap Administrator
 
 ORGANIZATION:	 Rocky Mountain Poison and Drug Center, Denver, CO
@@ -44,22 +46,23 @@ All parameters and known notes regarding REDcap data import are specified below.
 
 ________________________________________________________________________________________________________________________________
 
-*-------------------------------------------------------------------------------
-* API IMPORTER (CSV AND XML version)
-*-------------------------------------------------------------------------------;
-**MACRO Parameters
+-------------------------------------------------------------------------------
+ API IMPORTER (CSV AND XML version)
+-------------------------------------------------------------------------------;
+
+MACRO Parameters
 REQUIRED:
-	data		 ="REDCap ready" SAS dataset (must be in exact formatting as in REDCap database)
-	dir			 =UNQUOTED filepath to the directory that you want the API import info dumped into
-	token		 =User and Project specific token acquired from REDCap
-	url			 =REDCap specific URL for your site
+	data	="REDCap ready" SAS dataset (must be in exact formatting as in REDCap database)
+	dir	=UNQUOTED filepath to the directory that you want the API import info dumped into
+	token	=User and Project specific token acquired from REDCap
+	url	=REDCap specific URL for your site
 
 OPTIONAL:
-	filesize		   =filesize you would like to limit for the 'XML infile' or 'CSV infile' imported into REDCap (<=500kb necessary)
-	overwriteBehavior	 =API parameter for overwrite behavior in REDCap (values=normal | overwrite)
-	returnContent  		 =Specify what REDCap should return in the "out" files (values=count | ids | nothing)
+	filesize =filesize you would like to limit for the 'XML infile' or 'CSV infile' imported into REDCap (<=500kb necessary)
+	overwriteBehavior =API parameter for overwrite behavior in REDCap (values=normal | overwrite)
+	returnContent =Specify what REDCap should return in the "out" files (values=count | ids | nothing)
 
-**NOTES on Importing Issues:
+NOTES on Importing Issues:
 	- REDCap data that contain leading zero values pose issues with API importing. In order to resolve this,
 	  re-format the variables in the SAS dataset to contain leading zero values (i.e. a format of z2.). One
 	  could also edit the REDCap format of the variables to not have leading zero values.
