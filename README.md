@@ -113,4 +113,5 @@ NOTES on Importing Issues:
 	- Also make sure within REDCap the API abilities and 'Create Records' permissions are turned on, otherwise
 	  you will get a 403 error when executing the macro.
 
+	- SAS datasets must be REDCap ready!
 -------------------------------------------------------------------------------;
