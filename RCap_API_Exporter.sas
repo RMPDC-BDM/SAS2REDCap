@@ -1,6 +1,3 @@
-*proc printto log="G:\Resources\SAS\Macros\Log\.log" new;
-*proc printto print="G:\Resources\SAS\Macros\Lst\.lst" new;
-
 /******************************************************************************
 PROGRAM NAME:  RCap_API_Exporter.sas
 
@@ -155,7 +152,7 @@ DATE VALIDATED:	30Aug2016
 %macro REDCapToSAS(token, dir);
 
 libname dir "&dir.";
-%let url   = "https://dhharedcap.ucdenver.edu/api/";
+%let url   = "YOUR REDCap URL.edu/api/";
 
 *-------------------------------------------------------------------------------
 * Create Directory Folders for Dumping Files
