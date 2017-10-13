@@ -213,7 +213,7 @@ OPTIONAL (Defaulted if not specified):
 			%masterCSV(data=&data., file=in, overwriteBehavior=&overwriteBehavior., returnContent=&returnContent., token=&token.);
 	/*	4--Calculate MASTER CSV filesize and how many individual datasets I need to create
 			 to be under the specified kB size*/
-			%calc_CSV(fsize_kB=&filesize.);
+			%calc_CSV(fsize_kB=&filesize., data=&data.);
 	/*	5--From the calculations above, split the MASTER dataset into equal/balanced datasets*/
 			%buildcsv (data=&data., records=&obs_goal.);
 	/*	6--Create individual CSV files for each dataset and send it to REDCap utilizing the API*/
