@@ -724,8 +724,3 @@ libname dir "&dir.";
 %mend REDCapToSAS;
 
 *end of  RCap_API_Exporter.sas;
-
-*proc printto;
-*run;
-
-*%REDCapToSAS(7135DEF13BC3A1B1F5113927543558B7, H:\APIExportTest);
